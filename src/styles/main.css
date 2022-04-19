@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;  
+}
+
+/* Skip to content */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: black;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Header */
+.header {
+  padding: 16px 0;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__brand {
+  color: #FFFCF2;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* Navbar */
+.nav__item {
+  display: inline;
+}
+
+.nav__item a {
+  display: inline-block;
+  padding: 1.3em;
+  font-weight: 500;
+  color: #FFFCF2;
+  text-decoration: none;
+}
+
+.nav__item a:hover {
+  color: #EB5E28;
+}
+
+.nav__menu {
+  font-size: 28px;
+  font-weight: 700;
+  width: 1.3em;
+  cursor: pointer;
+  color: #252422;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.nav__menu:hover {
+  color: #EB5E28;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 570px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../public/images/heros/hero-image_1.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: -69px;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.hero__title {
+  color: #FFFCF2;
+  font-weight: 700;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 1rem 0;
+}
+
+.hero__description {
+  color: #FFFCF2;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* Main */
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Content */
+.content {
+  padding: 32px;
+}
+
+.content__title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* Restaurant */
+.restaurants {
+  margin: 32px auto auto;
+  text-align: left;
+  display: grid;
+  grid-gap: 16px;
+}
+
+.restaurant-card {
+  background-color: #252422;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #FFFCF2;
+}
+
+.restaurant-card__header {
+  position: relative;
+  color: #FFFCF2;
+}
+
+.restaurant-card__thumbnail {
+  background-size: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 100%;
+}
+
+.restaurant-card__header p {
+  position: absolute;
+  background-color: #252422;
+  text-align: center;
+  width: 50%;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  top: 25px;
+}
+
+.restaurant-card__content {
+  height: 200px;
+  padding: 16px 16px;
+}
+
+.restaurant-card__name {
+  font-size: 24px;
+}
+
+.restaurant-card__description {
+  margin: 8px 0;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+/* Footer */
+footer {
+  background-color: #252422;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  color: #FFFCF2;
+}
+
+/* 
+ * Small Screen
+ */
+@media screen and (max-width: 750px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .nav__menu {
+    display: inline-block;
+  }
+
+  .nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(200px);
+    background-color: #252422;
+    min-height: 100vh;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav__item, .nav__item a {
+    display: block;
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+}
+
+/* 
+ * Medium Screen
+ */
+@media screen and (min-width: 768px) {
+  .nav__item a {
+    padding: 0 1rem;
+    color: #FFFCF2;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  main {
+    margin: 80px 0;
+  }
+  
+  .restaurants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-card__thumbnail {
+    height: 250px;
+  }
+  
+  .restaurant-card__description {
+    font-size: 14px;
+  }
+
+  .restaurant-card__content {
+    height: 220px;
+  }
+}
+
+/* 
+ * Large Screen
+ */
+@media screen and (min-width: 992px) {
+  .restaurants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+ * Extra Large Screen
+ */
+ @media screen and (min-width: 1200px) {
+  .restaurant-card__header p {
+    width: 40%;
+  }
+
+  .restaurant-card__content {
+    padding: 16px 32px 32px 32px;
+  }
+}
