@@ -24,7 +24,7 @@ const getData = () => {
   let restaurantData = "";
   data.restaurants.forEach((restaurant) => {
     restaurantData += `
-      <article class="restaurant-card">
+      <article class="restaurant-card" tabindex="0">
         <header class="restaurant-card__header">
         <img class="restaurant-card__thumbnail" src="${restaurant.pictureId}" alt="restaurant-photo">
           <p>Kota ${restaurant.city}</p>
