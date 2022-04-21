@@ -34,7 +34,7 @@ body {
 
 /* Header */
 .header {
-  padding: 16px 0;
+  min-height: 56px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -54,7 +54,7 @@ body {
 
 .nav__item a {
   display: inline-block;
-  padding: 1.3em;
+  padding: 1em;
   font-weight: 500;
   color: #FFFCF2;
   text-decoration: none;
@@ -67,7 +67,7 @@ body {
 .nav__menu {
   font-size: 28px;
   font-weight: 700;
-  width: 1.3em;
+  padding: 10px;
   cursor: pointer;
   color: #252422;
   text-align: center;
@@ -90,7 +90,7 @@ body {
   background-image: url("../public/images/heros/hero-image_1.jpg");
   background-size: cover;
   background-position: center;
-  margin-top: -69px;
+  margin-top: -56px;
 }
 
 .hero__inner {
@@ -236,7 +236,7 @@ footer p {
  */
 @media screen and (min-width: 768px) {
   .nav__item a {
-    padding: 0 1rem;
+    padding: 1em;
     color: #FFFCF2;
     text-shadow: 2px 2px 4px #000000;
   }
@@ -266,6 +266,10 @@ footer p {
  * Large Screen
  */
 @media screen and (min-width: 992px) {
+  .hero {
+    background-position: top;
+  }
+
   .restaurants {
     grid-template-columns: repeat(3, 1fr);
   }
