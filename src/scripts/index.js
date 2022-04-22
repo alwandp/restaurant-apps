@@ -31,7 +31,7 @@ const getData = () => {
         </header>
         <div class="restaurant-card__content">
           <p>Rating: ${restaurant.rating}</p>
-          <h2 class="restaurant-card__name">${restaurant.name}</h2>
+          <h3 class="restaurant-card__name">${restaurant.name}</h3>
           <p class="restaurant-card__description">${restaurant.description}</p>
         </div>
       </article>
