@@ -1,43 +1,31 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
-import data from '../DATA.json';
+import '../styles/responsive.css';
+import '../styles/appbar.css';
+import '../styles/apphero.css';
+import '../styles/appfooter.css';
+import './component/app-bar';
+import './component/app-hero';
+import './component/app-footer';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-const menu = document.querySelector('#menu');
-const hero = document.querySelector('.hero');
-const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
-
-menu.addEventListener('click', event => {
-  drawer.classList.toggle('open');
-  event.stopPropagation();
+const app = new App({
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#drawerNavigation'),
+  content: document.querySelector('#mainContent'),
 });
 
-hero.addEventListener('click', () => {
-  drawer.classList.remove('open');
+window.addEventListener('hashchange', () => {
+  app.renderPage();
 });
 
-main.addEventListener('click', () => {
-  drawer.classList.remove('open');
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
 });
 
-const getData = () => {
-  let restaurantData = "";
-  data.restaurants.forEach((restaurant) => {
-    restaurantData += `
-      <article class="restaurant-card" tabindex="0">
-        <header class="restaurant-card__header">
-        <img class="restaurant-card__thumbnail" src="${restaurant.pictureId}" alt="restaurant-photo">
-          <p>Kota ${restaurant.city}</p>
-        </header>
-        <div class="restaurant-card__content">
-          <p>Rating: ${restaurant.rating}</p>
-          <h3 class="restaurant-card__name">${restaurant.name}</h3>
-          <p class="restaurant-card__description">${restaurant.description}</p>
-        </div>
-      </article>
-    `;
-    document.querySelector('#restaurantList').innerHTML = restaurantData;
-  });
-}
-
-getData();
+window.addEventListener('scroll', () => {
+  const sticky = document.querySelector('app-bar');
+  sticky.classList.toggle('sticky', window.scrollY > 0);
+});

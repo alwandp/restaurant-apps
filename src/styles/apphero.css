@@ -1,0 +1,29 @@
+app-hero {
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+  width: 100%;
+  text-align: center;
+  background-image: url("../public/images/heros/hero-image_2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+app-hero .app-hero__inner {
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+app-hero .app-hero__inner h2 {
+  color: #FFFCF2;
+  font-weight: 700;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px #252422;
+  padding: 1rem 0;
+}
+
+app-hero .app-hero__inner p {
+  color: #FFFCF2;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px #252422;
+}

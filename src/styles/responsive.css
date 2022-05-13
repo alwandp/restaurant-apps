@@ -1,0 +1,46 @@
+@media screen and (min-width: 650px) {
+  .restaurants {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .restaurant .restaurant__poster {
+    width: 100%;
+  }
+
+  .restaurant .restaurant__info .restaurant__info__item {
+    justify-content: center;
+  }
+
+  .restaurant .restaurant__info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .restaurant .restaurant__review-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+
+}
+
+@media screen and (min-width: 850px) {
+  .restaurants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .restaurants {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+    height: 300px;
+  }
+}

@@ -1,0 +1,13 @@
+app-footer {
+  min-height: 100%;
+  padding: 16px;
+}
+
+app-footer p {
+  text-align: center;
+  color: #ccc5b9;
+}
+
+app-footer p span {
+  color: #eb5e28;
+}
