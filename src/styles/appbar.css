@@ -1,8 +1,9 @@
 app-bar {
   padding: 8px 16px;
   background-color: #FFFCF2;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
   width: 100%;
   top: 0;
   z-index: 99;
@@ -23,7 +24,7 @@ app-bar .app-bar__menu button {
   color: #252422;
   border: none;
   font-size: 22px;
-  padding: 10px;
+  padding: 16px;
   font-weight: 700;
   cursor: pointer;
 }
@@ -50,17 +51,18 @@ app-bar .app-bar__brand h1 span {
 app-bar .app-bar__navigation {
   position: absolute;
   top: 50px;
-  right: -180px;
   width: 150px;
   min-height: 100vh;
+  left: -150px;
   transition: all 0.3s;
   padding: 8px;
   background-color: #FFFCF2;
-  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 99;
 }
 
 app-bar .app-bar__navigation.open {
-  right: 0;
+  left: 0;
 }
 
 app-bar .app-bar__navigation ul li a {

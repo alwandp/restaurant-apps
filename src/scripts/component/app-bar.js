@@ -5,11 +5,11 @@ class AppBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="app-bar__brand">
-        <h1><span>Hungry</span>Belly</h1>
-      </div>
       <div class="app-bar__menu">
         <button id="hamburgerButton" aria-label="hamburger button">☰</button>
+      </div>
+      <div class="app-bar__brand">
+        <h1><span>Hungry</span>Belly</h1>
       </div>
       <nav id="drawerNavigation" class="app-bar__navigation">
         <ul>
