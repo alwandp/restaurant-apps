@@ -1,12 +1,14 @@
 import 'regenerator-runtime'; /* for async await transpile */
+import './component/app-bar';
+import './component/app-hero';
+import './component/app-footer';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../styles/main.css';
 import '../styles/responsive.css';
 import '../styles/appbar.css';
 import '../styles/apphero.css';
 import '../styles/appfooter.css';
-import './component/app-bar';
-import './component/app-hero';
-import './component/app-footer';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 

@@ -128,7 +128,7 @@ main {
   padding: 32px;
 }
 
-.restaurant .restaurant__title {
+.restaurant .restaurant__name {
   font-size: 24px;
   padding: 32px 0;
   color: #EB5E28;
@@ -256,4 +256,33 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Search */
+.search-container {
+  display: flex;
+}
+
+.search-container input {
+  width: 100%;
+  border-color: #252422;
+  color: #252422;
+  font-weight: 500;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* Empty Favorite */
+.restaurant-item__not__found {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 32px auto;
+}
+
+.restaurant-item__not__found p {
+  font-size: 18px;
+  color: #CCC5B9;
+  font-weight: 500;
 }

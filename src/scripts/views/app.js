@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import DrawerInitiator from '../utils/drawer-initiatior';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
@@ -29,7 +28,7 @@ class App {
     const skipLinkElem = document.querySelector('.skip-to-content');
     skipLinkElem.addEventListener('click', (event) => {
       event.preventDefault();
-      document.querySelector('#mainContent').focus();
+      document.querySelector('#skipContent').focus();
     });
   }
 }
