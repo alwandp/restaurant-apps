@@ -1,0 +1,122 @@
+app-bar {
+  padding: 8px 16px;
+  background-color: #FFFCF2;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+app-bar.sticky {
+  position: fixed;
+}
+
+app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+app-bar .app-bar__menu button {
+  background-color: transparent;
+  color: #252422;
+  border: none;
+  font-size: 22px;
+  padding: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+app-bar .app-bar__menu button:hover {
+  color: #eb5e28;
+}
+
+app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+app-bar .app-bar__brand h1 {
+  color: #252422;
+  font-size: 22px;
+  user-select: none;
+}
+
+app-bar .app-bar__brand h1 span {
+  color: #eb5e28;
+}
+
+app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  width: 150px;
+  min-height: 100vh;
+  left: -150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #FFFCF2;
+  overflow-x: hidden;
+  z-index: 99;
+}
+
+app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #252422;
+  font-weight: 500;
+  padding: 16px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+app-bar .app-bar__navigation ul li a:hover {
+  color: #eb5e28;
+}
+
+@media screen and (min-width: 650px) {
+  app-bar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    padding: 8px 32px;
+  }
+
+  app-bar .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+
+  app-bar .app-bar__menu {
+    display: none;
+  }
+
+  app-bar .app-bar__navigation {
+    position: static;
+    background-color: transparent;
+    min-height: 56px;
+    width: 100%;
+  }
+
+  app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+
+  app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+}
