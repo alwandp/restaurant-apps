@@ -3,7 +3,7 @@ import { createRestaurantItemTemplate } from '../../templates/template-creator';
 class FavoriteRestaurantSearchView {
   getTemplate() {
     return `
-      <div id="skipContent" class="content">
+      <div class="content">
       <div class="search-container">
         <input id="query" type="text" placeholder="Search...">
       </div>
