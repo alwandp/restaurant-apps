@@ -4,7 +4,7 @@ app-hero {
   min-height: 90vh;
   width: 100%;
   text-align: center;
-  background-image: url("../public/images/heros/hero-image_2.jpg");
+  background-image: url("../public/images/hero-image_2-small.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -26,4 +26,16 @@ app-hero .app-hero__inner p {
   color: #FFFCF2;
   font-weight: 500;
   text-shadow: 2px 2px 4px #252422;
+}
+
+@media screen and (min-width: 800px) {
+  app-hero {
+    background-image: url("../public/images/hero-image_2-large.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  app-hero {
+    background-image: url("../public/images/hero-image_2-xl.jpg");
+  }
 }

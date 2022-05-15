@@ -31,7 +31,6 @@
   app-bar .app-bar__brand h1 {
     font-size: 2em;
   }
-
 }
 
 @media screen and (min-width: 850px) {
