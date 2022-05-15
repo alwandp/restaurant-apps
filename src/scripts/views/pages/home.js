@@ -5,7 +5,7 @@ const Home = {
   async render() {
     return `
       <app-hero></app-hero>
-      <div id="homeContent" tabindex="0" class="content">
+      <div class="content">
         <h2 class="content__heading">Explore Restaurant</h2>
         <div id="restaurants" class="restaurants">
         
